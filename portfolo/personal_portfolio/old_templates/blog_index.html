@@ -1,0 +1,36 @@
+{% extends "base10.html" %}
+{% load static %}
+{% block page_content %}
+<div class="container-1">
+ <div class="row">
+  <div class="col-md">
+    <h1 style="text-align: center; color: #FFFFFF;">Smog The Blog Photos</h1>
+   <br>
+   {% for image in images %}
+      <img src='{% static image %}'>
+    {% endfor %}
+    </div>
+
+<div class="col-md">
+       <h1 style="text-align: left; color: #FFFFFF;">Smog The Blog Index</h1>
+      <br>
+    {% for post in posts %}
+    <div class="card">
+      <h2><a href="{% url 'blog_detail' post.pk%}" style="color: #FFFFFF;">{{ post.title }}</a></h2>
+      <small>
+          {{ post.created_on.date }} |&nbsp;
+          Categories:&nbsp;
+          {% for category in post.categories.all %}
+          <a href="{% url 'blog_category' category.name %}" style="color: #FFFFFF;">
+              {{ category.name }}
+          </a>&nbsp;
+          {% endfor %}
+      </small>
+      <p>{{ post.body | slice:":400" }}...</p>
+     </div>
+
+    {% endfor %}
+    </div>
+  </div>
+ </div>
+{% endblock %}

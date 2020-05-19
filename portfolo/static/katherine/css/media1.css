@@ -1,0 +1,94 @@
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+    width: 100%;
+  }
+
+  pre {
+    font-size: 13px;
+  }
+
+  hr {
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .text {
+    text-align: center;
+    position: absolute;
+    bottom: -48rem;
+    left: -6.8rem;
+  }
+
+  .text1 {
+    text-align: center;
+    position: absolute;
+    bottom: -28rem;
+    left: 2rem;
+  }
+
+  .text2 {
+    text-align: center;
+    position: absolute;
+    bottom: 11rem;
+    left: 6rem;
+  }
+
+  .scotland {
+    width: 100%;
+    height: 55rem;
+    background: no-repeat;
+    background-image:  url('static/img/edinburgh3.jpg');
+  	background-size: contain;
+  }
+
+  .overlay {
+    transition: .3s ease;
+    opacity: 0;
+    position: absolute;
+    top: 20rem;
+    left: 16rem;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 65px;
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .arrow{
+      position: absolute;
+      top: 28rem;
+      left: 7.5rem;
+  }
+
+  .navbar-default1 {
+    position: relative;
+    bottom: -28rem;
+    left: 0;
+    right: 0;
+  }
+}
+
+.mp1 {
+  position: relative;
+  left: 4rem;
+}
+
+.mp2 {
+  position: relative;
+  left: 4rem;
+}
+
+.mh1 {
+  position: relative;
+  left: 4rem;
+}
+
+.mh2 {
+  position: relative;
+  left: 4rem;
+  font-size: 5px;
+}

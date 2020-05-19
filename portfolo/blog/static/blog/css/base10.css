@@ -1,0 +1,60 @@
+body {
+ background-image: url('{% static "blog/img/edinburgh.jpg" %}');
+ background-repeat: no-repeat;
+ background-size: cover;
+ overflow-y: scroll;
+ -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+p {
+  color: #FFFFFF;;
+}
+
+.navbar-default {
+  background-color: #00BFFF;
+}
+
+.container-1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.row > div {
+  width: 300px;
+  margin: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+
+
+.card {
+  box-shadow: 5px 5px 5px #7b7b7b;
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #FFFFFF;
+  align-items: center;
+  text-align: center;
+  width: 20rem;
+  height: 15rem;
+  margin: 5px;
+}
+
+.photo {
+  position: absolute;
+  top: 3.5rem;
+  left: 3rem;
+}
+
+img {
+  width: 20rem;
+  height: 15rem;
+}

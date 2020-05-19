@@ -1,0 +1,48 @@
+This is my first ever blog but not my first post lol! Pardon the dry blog page, its under construction....
+
+<h1 style="text-align: center; color: #FFFFFF;">Smog The Blog Index</h1>
+
+
+
+
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=20)
+
+class Post(models.Model):
+    title = models.CharField(max_length=255)
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    last_modified = models.DateTimeField(auto_now=True)
+    categories = models.ManyToManyField('Category', related_name='posts')
+
+
+class Comment(models.Model):
+    author = models.CharField(max_length=60)
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    post = models.ForeignKey('Post', on_delete=models.CASCADE)
+
+
+    from blog.models import Post, Category
+    # Register your models here.
+
+    class PostAdmin(admin.ModelAdmin):
+        pass
+
+    class CategoryAdmin(admin.ModelAdmin):
+        pass
+
+    admin.site.register(Post, PostAdmin)
+    admin.site.register(Category, CategoryAdmin)
+
+    from . import views
+
+    urlpatterns = [
+        path("", views.blog_index, name="blog_index"),
+        path("<int:pk>/", views.blog_detail, name="blog_detail"),
+        path("<category>/", views.blog_category, name="blog_category"),
+    ]
+
+path("blog/", include("blog.urls")),

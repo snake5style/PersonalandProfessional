@@ -1,0 +1,75 @@
+{% load static %}
+
+<title>futbolallinone</title>
+<meta name="google" content="notranslate" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'futbolallinone/css/futbol.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Nosifer&display=swap" rel="stylesheet">
+<link rel="icon" href="{% static 'personal/img/futbol-solid.svg' %}" type="image/svg" >
+
+<body style="background-image:  url({% static 'futbolallinone/img/field.jpeg' %});">
+
+<nav class="navbar navbar-default navbar-expand-lg navbar-light">
+           <div class="container-fluid">
+               <i class="navbar-brand"><h3>Futbol All In One</h3></i>
+               <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                   aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarResponsive">
+                   <ul class="navbar-nav ml-auto">
+                       <li class="nav-item ">
+                           <a class="nav-link font-weight-bold" href="{% url  'personal_index' %}"><i>Home</i></a>
+                       </li>
+                       <li class="nav-item ">
+                           <a class="nav-link font-weight-bold" href="{% url 'future_index' %}"><i>Future Projects</i></a>
+                       </li>
+                   </ul>
+               </div>
+         </nav>
+
+         <div class="flex-container">
+
+           <div class="card">
+             <h1 style="text-align: center;"><img src="{% static 'futbolallinone/img/manutd.png' %}" alt=""> Engilsh Premier League</h1>
+             <div class="card-body">
+             <pre>{{ final.0 }}</pre>
+           </div>
+          </div>
+          <div class="card">
+            <h1 style="text-align: center;"><img src="{% static 'futbolallinone/img/realmd.png' %}" alt=""> Spanish La Liga</h1>
+            <div class="card-body">
+            <pre>{{ final.1 }}</pre>
+          </div>
+         </div>
+           <div class="card">
+             <h1 style="text-align: center;"><img src="{% static 'futbolallinone/img/bayern.png' %}" alt=""> German Bundesliga</h1>
+             <div class="card-body">
+             <pre>{{ final.2 }}</pre>
+           </div>
+          </div>
+          <div class="card">
+            <h1 style="text-align: center;"><img src="{% static 'futbolallinone/img/acmilan.png' %}" alt=""> Italian Serie A</h1>
+            <div class="card-body">
+            <pre>{{ final.3 }}</pre>
+          </div>
+         </div>
+         <div class="card">
+           <h1 style="text-align: center;"><img src="{% static 'futbolallinone/img/PSG.png' %}" alt=""> French Ligue</h1>
+           <div class="card-body">
+           <pre>{{ final.4 }}</pre>
+         </div>
+        </div>
+      </div>
+
+</body>
+
+
+<script type="text/javascript" src="{% static 'personal/js/modal.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>

@@ -212,3 +212,8 @@ pre {
 .fa-blog {
   font-size: 30px;
 }
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}

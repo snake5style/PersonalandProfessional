@@ -3,6 +3,10 @@
     background-color: lightblue;
     width: 100%;
   }
+  
+  [class*="col-"] {
+    width: 100%;
+  }
 
   pre {
     font-size: 13px;

@@ -1,0 +1,54 @@
+body {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h3, h4 {
+   color: white;
+}
+
+i {
+  color: white;
+}
+
+img {
+  height: 4rem;
+  width: 4rem;
+}
+
+pre {
+   font-size: 17px;
+   color: black;
+}
+
+h1 {
+
+  font-size: 30px;
+}
+
+.navbar-default {
+  box-shadow: 0 0 5px;
+  background-color: black;
+}
+
+.card {
+    height: 45rem;
+    width: 57.5rem;
+    border: 8px solid black;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-container > div {
+  margin: 20px;
+  text-align: center;
+  justify-content: flex-start;
+}

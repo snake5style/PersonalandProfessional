@@ -1,0 +1,32 @@
+body {
+  background-color: #FFDAB9;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar-default {
+  background-color: #c04e01;
+  box-shadow: 0 0 5px;
+}
+
+.form-container {
+  position: relative;
+  left: 17rem;
+}
+
+.head {
+  position: relative;
+  left: 12.5rem;
+}
+
+.company-icon {
+   color: #c04e01;
+   position: relative;
+   left: 60rem;
+   top: -25rem;
+   font-size: 20rem;
+}

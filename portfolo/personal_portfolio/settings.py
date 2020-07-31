@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'blog',
     'future_projects',
     'futbolallinone'
+    'company'
 ]
 
 MIDDLEWARE = [
@@ -133,6 +134,7 @@ STATICFILES_DIRS = [
    '/home/ubuntu/portifolo/portfolo/katherine/static',
    '/home/ubuntu/portifolo/portfolo/personal/static',
    '/home/ubuntu/portifolo/portfolo/futbolallinone/static',
+   '/home/ubuntu/portifolo/portfolo/company/static',
 ]
 
 

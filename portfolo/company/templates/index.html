@@ -1,0 +1,54 @@
+{% extends "base_crud.html" %}
+{% load static %}
+{% block page_content %}
+<div class="flex-form">
+  <h1 class="head">Professional Information</h1>
+  <form method="POST" class="post-form" action="">
+          {% csrf_token %}
+      <div class="form-container">
+  <br>
+      <div class="form-group row">
+      <label class="col-sm-1 col-form-label"></label>
+      <div class="col-sm-4">
+      <h3>Enter Details</h3>
+
+      </div>
+    </div>
+      <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Professional Id:</label>
+      <div class="col-sm-4">
+        {{ form.proid }}
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Professional Name:</label>
+      <div class="col-sm-4">
+        {{ form.name }}
+      </div>
+    </div>
+      <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Professional Email:</label>
+      <div class="col-sm-4">
+        {{ form.proemail }}
+      </div>
+    </div>
+      <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Professional Contact:</label>
+      <div class="col-sm-4">
+        {{ form.procontact }}
+      </div>
+    </div>
+      <div class="form-group row">
+      <label class="col-sm-1 col-form-label"></label>
+      <div class="col-sm-4">
+      <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+      </div>
+  </form>
+</div>
+<div class="company-icon">
+  <i class="fa fa-id-card-o" aria-hidden="true"></i>
+
+</div>
+      {% endblock %}

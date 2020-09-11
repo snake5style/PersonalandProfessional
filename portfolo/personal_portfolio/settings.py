@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'katherine',
     'blog',
     'future_projects',
-    'futbolallinone'
+    'futbolallinone',
     'company'
 ]
 

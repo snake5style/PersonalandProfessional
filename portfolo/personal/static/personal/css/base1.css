@@ -65,10 +65,10 @@ h1 {
 }
 
 .card {
-  background-size: 60rem 35rem;
+  background-size: 70rem 45rem;
   background-repeat: no-repeat;
-  height: 35rem;
-  width: 60rem;
+  height: 45rem;
+  width: 70rem;
   border-radius: 50%;
   color: white;
   border: 8px solid #c04e01;

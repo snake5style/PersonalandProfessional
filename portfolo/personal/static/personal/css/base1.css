@@ -49,31 +49,34 @@ h1 {
 
 .fa-file-pdf-o {
   font-size: 60px;
-  
+  color: white;
 }
 
 .fa-linkedin-square {
   font-size: 60px;
+  color: white;
 }
 
 .fa-github {
   font-size: 60px;
+  color: white;
 }
 
 .space {
-  height: 10rem;
+  height: 5rem;
 }
 
-.card {
+.card1 {
   background-size: 70rem 45rem;
   background-repeat: no-repeat;
   height: 45rem;
   width: 70rem;
   border-radius: 50%;
   color: white;
+  font-size: 40px;
   border: 8px solid #c04e01;
-  position: relative;
-  left: 30rem;
+  position: fixed;
+  left: 25rem;
 }
 
 .card-body {
@@ -83,8 +86,8 @@ h1 {
 .card-body > span {
   position: absolute;
   color: white;
-  bottom: 0;
-  right: 20rem;
+  bottom: -40rem;
+  left: 30rem;
 }
 
 .btn {

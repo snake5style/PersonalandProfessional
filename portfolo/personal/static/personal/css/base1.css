@@ -65,7 +65,7 @@ h1 {
 }
 
 .card {
-  background-image: url(images/me.jpg);
+  background-image: url(static/personal/img/me.jpg);
   background-size: 60rem 35rem;
   background-repeat: no-repeat;
   height: 35rem;
@@ -83,6 +83,7 @@ h1 {
 
 .card-body > span {
   position: absolute;
+  color: white;
   bottom: 0;
   right: 20rem;
 }

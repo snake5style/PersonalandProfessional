@@ -1,4 +1,15 @@
 @media (max-width: 800px) {
+
+  body {
+    background-color: black;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
   .space {
     height: 10rem;
   }

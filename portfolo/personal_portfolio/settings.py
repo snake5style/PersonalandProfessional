@@ -139,4 +139,4 @@ STATICFILES_DIRS = [
 
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/home/ubuntu/portifolo/portfolo/static'
+MEDIA_ROOT = '/home/ubuntu/portifolo/portfolo/media'

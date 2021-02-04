@@ -1,12 +1,24 @@
 from django.shortcuts import render
+import os
+import sqlalchemy
+from sqlalchemy import create_engine
+import psycopg2
 import re
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-from prettytable import PrettyTable
-from prettytable import from_csv
+from personal_portfolio.settings import DATABASES
+from futbolallinone.models import bund, epl, liga, ligue, serie
 
-# Create your views here.
+
+User = DATABASES['default']['USER']
+Password = DATABASES['default']['PASSWORD']
+Host = DATABASES['default']['HOST']
+Port = DATABASES['default']['PORT']
+Database = DATABASES['default']['NAME']
+
+engine = create_engine("postgresql://" + User + ":" + Password + "@" + Host + ":" + Port + "/" + Database)
+
 page = [
       'https://www.skysports.com/premier-league-table',
       'https://www.skysports.com/la-liga-table',
@@ -16,15 +28,13 @@ page = [
 ]
 
 
-league = [ "EPL", "LIGA", "BUND", "SERIE", "LIGUE", ]
+league = [ "epl", "liga", "bund", "serie", "ligue", ]
+columns = ['Rank', 'Team', 'Pl', 'W', 'D', 'L', 'F', 'A', 'GD', 'Pts', 'Last 6']
 
 for pag, leag in zip(page, league):
    response = requests.get(pag)
    soup = BeautifulSoup(response.text, 'html.parser')
-
-   top_col = soup.find('tr', attrs={'class': 'standing-table__row'})
-   columns = [col.get_text() for col in top_col.find_all('th')]
-
+ 
    last_df = pd.DataFrame(columns=columns)
    last_df
 
@@ -36,44 +46,20 @@ for pag, leag in zip(page, league):
       first_df.columns=columns
 
       last_df = pd.concat([last_df,first_df], ignore_index=True)
-
-      last_df.to_csv('{0}.csv'.format(leag), index = False, sep=',', encoding='utf-8')
-
-
-file_path = [ "EPL.csv", "LIGA.csv", "BUND.csv", "SERIE.csv", "LIGUE.csv", ]
-final = []
-
-# EPL
-csv_file = open(file_path[0])
-final1 = from_csv(csv_file)
-
-#Liga
-csv_file1 = open(file_path[1])
-final2 = from_csv(csv_file1)
-
-#Bund
-csv_file2 = open(file_path[2])
-final3 = from_csv(csv_file2)
-
-#Serie
-csv_file3 = open(file_path[3])
-final4 = from_csv(csv_file3)
-
-#Ligue
-csv_file4 = open(file_path[4])
-final5 = from_csv(csv_file4)
-
-final.append(final1)
-final.append(final2)
-final.append(final3)
-final.append(final4)
-final.append(final5)
-
-standings = {
-   'final': final
+      last_df.to_sql('{0}'.format(leag), engine, if_exists='replace',index=False)   
+  
+bund_table = list(bund.objects.values_list())
+epl_table = list(epl.objects.values_list())
+liga_table = list(liga.objects.values_list())
+ligue_table = list(ligue.objects.values_list())
+serie_table = list(serie.objects.values_list())
+context = {
+    'bund_table': bund_table,
+    'epl_table': epl_table,
+    'liga_table': liga_table,
+    'ligue_table': ligue_table,
+    'serie_table': serie_table,
 }
 
 def futbol_index(requests):
-   return render(requests, 'futbol.html', standings)
-
-
+   return render(requests, 'futbol.html', context) 

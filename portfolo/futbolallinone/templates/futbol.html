@@ -32,37 +32,192 @@
 
          <div class="flex-container">
 
-           <div class="card">
-             <h1 style="text-align: center;"><img src="{% static 'futbolallinone/img/manutd.png' %}" alt=""> Engilsh Premier League</h1>
-             <div class="card-body">
-             <pre>{{ final.0 }}</pre>
-           </div>
-          </div>
-          <div class="card">
-            <h1 style="text-align: center;"><img src="{% static 'futbolallinone/img/realmd.png' %}" alt=""> Spanish La Liga</h1>
+          <div class="card" style="background-image:  url({% static 'futbolallinone/img/futbol.jpg' %});">
+                <h1 style="text-align: center;">English Premier League<img src="{% static 'futbolallinone/img/manutd.png' %}" alt=""></h1>   
             <div class="card-body">
-            <pre>{{ final.1 }}</pre>
-          </div>
-         </div>
-           <div class="card">
-             <h1 style="text-align: center;"><img src="{% static 'futbolallinone/img/bayern.png' %}" alt=""> German Bundesliga</h1>
-             <div class="card-body">
-             <pre>{{ final.2 }}</pre>
-           </div>
-          </div>
-          <div class="card">
-            <h1 style="text-align: center;"><img src="{% static 'futbolallinone/img/acmilan.png' %}" alt=""> Italian Serie A</h1>
-            <div class="card-body">
-            <pre>{{ final.3 }}</pre>
-          </div>
-         </div>
-         <div class="card">
-           <h1 style="text-align: center;"><img src="{% static 'futbolallinone/img/PSG.png' %}" alt=""> French Ligue</h1>
-           <div class="card-body">
-           <pre>{{ final.4 }}</pre>
-         </div>
+                <table>
+                   <thead>
+                    <tr>
+                      <th>Rank</th>
+                      <th>Team</th>
+                      <th>Pl</th>
+                      <th>W</th>
+                      <th>D</th>
+                      <th>L</th>
+                    <th>F</th>
+                    <th>A</th>
+                    <th>GD</th>
+                    <th>Pts</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {% for table in epl_table %}  
+                    <tr>
+                        <td>{{ table.0 }}</td> 
+                        <td>{{ table.1 }}</td>
+                        <td>{{ table.2 }}</td>
+                        <td>{{ table.3 }}</td>
+                        <td>{{ table.4 }}</td>
+                        <td>{{ table.5 }}</td>
+                        <td>{{ table.6 }}</td>
+                        <td>{{ table.7 }}</td>
+                        <td>{{ table.8 }}</td>
+                        <td>{{ table.9 }}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>  
+                </table>
+                </div>
+            </div> 
+            <div class="card" style="background-image:  url({% static 'futbolallinone/img/futbol.jpg' %});">
+                <h1 style="text-align: center;">La Liga Santander<img src="{% static 'futbolallinone/img/realmd.png' %}" alt=""></h1>
+              <div class="card-body">
+                  <table>
+                     <thead>
+                      <tr>
+                        <th>Rank</th>
+                        <th>Team</th>
+                        <th>Pl</th>
+                        <th>W</th>
+                        <th>D</th>
+                        <th>L</th>
+                      <th>F</th>
+                      <th>A</th>
+                      <th>GD</th>
+                      <th>Pts</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for table in liga_table %}  
+                      <tr>
+                          <td>{{ table.0 }}</td> 
+                          <td>{{ table.1 }}</td>
+                          <td>{{ table.2 }}</td>
+                          <td>{{ table.3 }}</td>
+                          <td>{{ table.4 }}</td>
+                          <td>{{ table.5 }}</td>
+                          <td>{{ table.6 }}</td>
+                          <td>{{ table.7 }}</td>
+                          <td>{{ table.8 }}</td>
+                          <td>{{ table.9 }}</td>
+                      </tr>
+                      {% endfor %}
+                      </tbody>  
+                  </table>
+                  </div>
+              </div> 
+              <div class="card" style="background-image:  url({% static 'futbolallinone/img/futbol.jpg' %});">
+                <h1 style="text-align: center;">Bundesliga<img src="{% static 'futbolallinone/img/bayern.png' %}" alt=""></h1>
+              <div class="card-body">
+                  <table>
+                     <thead>
+                      <tr>
+                        <th>Rank</th>
+                        <th>Team</th>
+                        <th>Pl</th>
+                        <th>W</th>
+                        <th>D</th>
+                        <th>L</th>
+                      <th>F</th>
+                      <th>A</th>
+                      <th>GD</th>
+                      <th>Pts</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for table in bund_table %}  
+                      <tr>
+                          <td>{{ table.0 }}</td> 
+                          <td>{{ table.1 }}</td>
+                          <td>{{ table.2 }}</td>
+                          <td>{{ table.3 }}</td>
+                          <td>{{ table.4 }}</td>
+                          <td>{{ table.5 }}</td>
+                          <td>{{ table.6 }}</td>
+                          <td>{{ table.7 }}</td>
+                          <td>{{ table.8 }}</td>
+                          <td>{{ table.9 }}</td>
+                      </tr>
+                      {% endfor %}
+                      </tbody>  
+                  </table>
+                  </div>
+              </div> 
+              <div class="card" style="background-image:  url({% static 'futbolallinone/img/futbol.jpg' %});">
+                <h1 style="text-align: center;">Serie A<img src="{% static 'futbolallinone/img/acmilan.png' %}" alt=""></h1>
+              <div class="card-body">
+                  <table>
+                     <thead>
+                      <tr>
+                        <th>Rank</th>
+                        <th>Team</th>
+                        <th>Pl</th>
+                        <th>W</th>
+                        <th>D</th>
+                        <th>L</th>
+                      <th>F</th>
+                      <th>A</th>
+                      <th>GD</th>
+                      <th>Pts</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for table in serie_table %}  
+                      <tr>
+                          <td>{{ table.0 }}</td> 
+                          <td>{{ table.1 }}</td>
+                          <td>{{ table.2 }}</td>
+                          <td>{{ table.3 }}</td>
+                          <td>{{ table.4 }}</td>
+                          <td>{{ table.5 }}</td>
+                          <td>{{ table.6 }}</td>
+                          <td>{{ table.7 }}</td>
+                          <td>{{ table.8 }}</td>
+                          <td>{{ table.9 }}</td>
+                      </tr>
+                      {% endfor %}
+                      </tbody>  
+                  </table>
+                  </div>
+              </div> 
+              <div class="card" style="background-image:  url({% static 'futbolallinone/img/futbol.jpg' %});">
+                <h1 style="text-align: center;">France Ligue 1<img src="{% static 'futbolallinone/img/PSG.png' %}" alt=""></h1>
+              <div class="card-body">
+                  <table>
+                     <thead>
+                      <tr>
+                        <th>Rank</th>
+                        <th>Team</th>
+                        <th>Pl</th>
+                        <th>W</th>
+                        <th>D</th>
+                        <th>L</th>
+                      <th>F</th>
+                      <th>A</th>
+                      <th>GD</th>
+                      <th>Pts</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for table in ligue_table %}  
+                      <tr>
+                          <td>{{ table.0 }}</td> 
+                          <td>{{ table.1 }}</td>
+                          <td>{{ table.2 }}</td>
+                          <td>{{ table.3 }}</td>
+                          <td>{{ table.4 }}</td>
+                          <td>{{ table.5 }}</td>
+                          <td>{{ table.6 }}</td>
+                          <td>{{ table.7 }}</td>
+                          <td>{{ table.8 }}</td>
+                          <td>{{ table.9 }}</td>
+                      </tr>
+                      {% endfor %}
+                      </tbody>  
+                  </table>
+                  </div>
+              </div> 
         </div>
-      </div>
 
 </body>
 

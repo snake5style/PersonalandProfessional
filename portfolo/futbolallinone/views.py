@@ -62,4 +62,4 @@ context = {
 }
 
 def futbol_index(requests):
-   return render(requests, 'futbol.html') 
+   return render(requests, 'futbol.html', context) 

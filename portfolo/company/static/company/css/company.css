@@ -30,3 +30,28 @@ body::-webkit-scrollbar {
    top: -25rem;
    font-size: 20rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .head {
+    position: relative;
+    left: 2.5rem;
+  }
+
+  .form-container {
+    position: relative;
+    left: 3rem;
+  }
+
+
+  .company-icon {
+    color: #c04e01;
+    position: relative;
+    left: 18rem;
+    top: -25rem;
+    font-size: 10rem;
+ }
+
+ th, td {
+   font-size: 12.4px;
+ }
+}

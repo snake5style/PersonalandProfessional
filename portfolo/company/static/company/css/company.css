@@ -11,6 +11,7 @@ body::-webkit-scrollbar {
 .navbar-default {
   background-color: #c04e01;
   box-shadow: 0 0 5px;
+  width: 100%;
 }
 
 .form-container {
@@ -35,7 +36,7 @@ body::-webkit-scrollbar {
   .navbar-default {
     width: 100%;
   }
-  
+
   .head {
     position: relative;
     left: 2.5rem;

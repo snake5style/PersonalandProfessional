@@ -73,7 +73,7 @@ body::-webkit-scrollbar {
     position: relative;
     left: 18rem;
     top: -25rem;
-    font-size: 10rem;
+    font-size: 5rem;
  }
 
  th, td {

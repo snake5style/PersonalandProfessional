@@ -33,10 +33,20 @@ body::-webkit-scrollbar {
 }
 
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body {
+    background-color: #FFDAB9;
+    overflow: hidden;
+    -ms-overflow-style: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
   .navbar-default {
     width: 100%;
   }
-  
+
   .head {
     position: relative;
     left: 2.5rem;
@@ -62,7 +72,17 @@ body::-webkit-scrollbar {
 }
 
 /* #### Mobile Phones Portrait #### */
-@media screen and (max-device-width: 480px) and (orientation: portrait){
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+  body {
+    background-color: #FFDAB9;
+    overflow: hidden;
+    -ms-overflow-style: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
   .navbar-default {
     width: 100%;
   }
@@ -92,7 +112,17 @@ body::-webkit-scrollbar {
 }
 
 /* #### Mobile Phones Landscape #### */
-@media screen and (max-device-width: 640px) and (orientation: landscape){
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+  body {
+    background-color: #FFDAB9;
+    overflow: hidden;
+    -ms-overflow-style: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  
   .navbar-default {
     width: 100%;
   }

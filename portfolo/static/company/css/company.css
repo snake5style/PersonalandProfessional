@@ -36,6 +36,7 @@ body::-webkit-scrollbar {
   body {
     background-color: #FFDAB9;
     overflow: hidden;
+    position: relative;
     -ms-overflow-style: none;
   }
 
@@ -76,6 +77,7 @@ body::-webkit-scrollbar {
   body {
     background-color: #FFDAB9;
     overflow: hidden;
+    position: relative;
     -ms-overflow-style: none;
   }
 
@@ -116,6 +118,7 @@ body::-webkit-scrollbar {
   body {
     background-color: #FFDAB9;
     overflow: hidden;
+    position: relative;
     -ms-overflow-style: none;
   }
 

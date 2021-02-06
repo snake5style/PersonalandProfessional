@@ -32,7 +32,11 @@ body::-webkit-scrollbar {
    font-size: 20rem;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .navbar-default {
+    width: 100%;
+  }
+  
   .head {
     position: relative;
     left: 2.5rem;
@@ -57,7 +61,8 @@ body::-webkit-scrollbar {
  }
 }
 
-@media (min-width: 576px) {
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-device-width: 480px) and (orientation: portrait){
   .navbar-default {
     width: 100%;
   }
@@ -78,7 +83,7 @@ body::-webkit-scrollbar {
     position: relative;
     left: 18rem;
     top: -25rem;
-    font-size: 10rem;
+    font-size: 5rem;
  }
 
  th, td {
@@ -86,7 +91,8 @@ body::-webkit-scrollbar {
  }
 }
 
-@media only screen and (max-width: 480px) {
+/* #### Mobile Phones Landscape #### */
+@media screen and (max-device-width: 640px) and (orientation: landscape){
   .navbar-default {
     width: 100%;
   }

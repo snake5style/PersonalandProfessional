@@ -61,7 +61,7 @@ body::-webkit-scrollbar {
   .company-icon {
     color: #c04e01;
     position: relative;
-    left: 45rem;
+    left: 18rem;
     top: -30rem;
     font-size: 10rem;
  }
@@ -101,7 +101,7 @@ body::-webkit-scrollbar {
   .company-icon {
     color: #c04e01;
     position: relative;
-    left: 18rem;
+    left: 15rem;
     top: -25rem;
     font-size: 5rem;
  }
@@ -122,7 +122,7 @@ body::-webkit-scrollbar {
   body::-webkit-scrollbar {
     display: none;
   }
-  
+
   .navbar-default {
     width: 100%;
   }
@@ -141,7 +141,7 @@ body::-webkit-scrollbar {
   .company-icon {
     color: #c04e01;
     position: relative;
-    left: 18rem;
+    left: 15rem;
     top: -25rem;
     font-size: 5rem;
  }

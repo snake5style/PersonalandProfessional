@@ -20,7 +20,7 @@ Database = DATABASES['default']['NAME']
 # Connecting to db
 engine = create_engine("postgresql://" + User + ":" + Password + "@" + Host + ":" + Port + "/" + Database)
 
-#Scraping Futbol data from Skysports league tables
+# Scraping Futbol data from Skysports league tables
 # List of addresses
 page = [
       'https://www.skysports.com/premier-league-table',

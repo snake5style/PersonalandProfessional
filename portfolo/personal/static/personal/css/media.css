@@ -1,4 +1,4 @@
-@media (max-width: 800px) {
+@media screen and (max-width: 768px) {
 
   body {
     background-color: black;
@@ -53,6 +53,67 @@
   
   .fa-github {
     font-size: 20px;
+    color: white;
+  }
+  
+}
+
+
+@media screen and (max-width: 480px) {
+
+  body {
+    background-color: black;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  .space {
+    height: 10rem;
+  }
+
+  .card {
+    background-size: 10rem 10rem;
+    background-repeat: no-repeat;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    color: white;
+    border: 8px solid #c04e01;
+    position: relative;
+    left: 5rem;
+  }
+
+  .card-body {
+    position: relative;
+    font-size: 5px;
+  }
+
+  h4 {
+    font-size: 10px;
+  }
+
+  .card-body > span {
+    position: absolute;
+    right: 2rem;
+    
+  }
+
+  .fa-file-pdf-o {
+    font-size: 10px;
+    color: white;
+  }
+  
+  .fa-linkedin-square {
+    font-size: 10px;
+    color: white;
+  }
+  
+  .fa-github {
+    font-size: 10px;
     color: white;
   }
   
